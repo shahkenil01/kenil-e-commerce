@@ -327,7 +327,7 @@ nav .navPart1 .catWrapper .sidebarNav ul li:hover .submenu button{
   color: #f92b2b; }
 .navPart2 ul li{
   position: relative;
-  padding-bottom: 20px;}
+  padding-bottom: 15px;}
 .navPart2 .submenu button{
   color: rgba(0, 0, 0, 0.9);
   font-weight: normal;
