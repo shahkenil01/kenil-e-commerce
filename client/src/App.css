@@ -388,8 +388,6 @@ nav .navPart1 .catWrapper .sidebarNav ul li:hover .submenu button{
 .homeBannerSection *{
   outline: none;
   border-radius: 10px;}
-.slick-slide.slick-active {
-  transform: scale(1);}
 /**Arrow Style Start**/
 .homeBanner-prev-btn , .homeBanner-next-btn , .related-products-prev-btn , .related-products-next-btn {
   background: white;

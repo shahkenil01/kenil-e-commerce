@@ -17,7 +17,6 @@ const homeBanner = ()=>{
         dots: false,
         infinite: true,
         speed: 500,
-        spaceBetween: 10,
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
@@ -32,30 +31,30 @@ const homeBanner = ()=>{
         <div className="container mt-3">
             <div className="homeBannerSection">
                 <Slider {...settings}>
-                    <div className="item">
-                        <img src={images.slider1} className="w-100"/>
-                    </div>
-                    <div className="item">
-                        <img src={images.slider2} className="w-100"/>
-                    </div>
-                    <div className="item">
-                        <img src={images.slider3} className="w-100"/>
-                    </div>
-                    <div className="item">
-                        <img src={images.slider4} className="w-100"/>
-                    </div>
-                    <div className="item">
-                        <img src={images.slider5} className="w-100"/>
-                    </div>
-                    <div className="item">
-                        <img src={images.slider6} className="w-100"/>
-                    </div>
-                    <div className="item">
-                        <img src={images.slider7} className="w-100"/>
-                    </div>
-                    <div className="item">
-                        <img src={images.slider8} className="w-100"/>
-                    </div>
+                <div className="item">
+                    <img src={images.slider1} className="w-100" alt="Slider 1"/>
+                </div>
+                <div className="item">
+                    <img src={images.slider2} className="w-100" alt="Slider 2"/>
+                </div>
+                <div className="item">
+                    <img src={images.slider3} className="w-100" alt="Slider 3"/>
+                </div>
+                <div className="item">
+                    <img src={images.slider4} className="w-100" alt="Slider 4"/>
+                </div>
+                <div className="item">
+                    <img src={images.slider5} className="w-100" alt="Slider 5"/>
+                </div>
+                <div className="item">
+                    <img src={images.slider6} className="w-100" alt="Slider 6"/>
+                </div>
+                <div className="item">
+                    <img src={images.slider7} className="w-100" alt="Slider 7"/>
+                </div>
+                <div className="item">
+                    <img src={images.slider8} className="w-100" alt="Slider 8"/>
+                </div>
                 </Slider>
             </div>
         </div>
