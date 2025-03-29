@@ -34,8 +34,8 @@ router.post('/create', async (req, res) => {
 
   if (!uploadStatus) {
     return res.status(500).json({
-      error: "images cannot upload!",
-      status: false
+    error: "images cannot upload!",
+    status: false
     });
   }
 

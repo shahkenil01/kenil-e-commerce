@@ -12,8 +12,8 @@ const productSchema = mongoose.Schema({
   Images: [{
     type:String,
     required: true
-  }
-],
+    }
+  ],
   brand: {
     type: String,
     default: ''

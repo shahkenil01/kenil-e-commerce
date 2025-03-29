@@ -12,7 +12,7 @@ app.options('*', cors());
 app.use(bodyParser.json());
 
 //Routes
-const categoryRoutes = require('./routes/category')
+const categoryRoutes = require('./routes/categories')
 const productRoutes = require('./routes/products');
 
 app.use(`/api/category`, categoryRoutes)
