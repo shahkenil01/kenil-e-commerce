@@ -20,13 +20,13 @@ const ProductDetails = () =>{
     return(
         <>
             <section className="productDetails section">
-                <div className="Sidebar-container">
+                <div className="container">
                     <div className="row">
-                        <div className="col-md-4 pl-5">
+                        <div className="col-md-4">
                             <ProductZoom/>
                         </div>
 
-                        <div className="col-md-7 pl-5">
+                        <div className="col-md-8">
                             <h2 className="hd text-capitalize">All Natural Italian-Style Chicken Meatballs</h2>
                             <ul className="list list-inline d-flex align-items-center">
                                 <li className="list-inline-item">

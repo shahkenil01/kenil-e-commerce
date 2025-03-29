@@ -18,7 +18,7 @@ const RelatedProducts = (props) => {
 
   return (
     <>
-      <div className="Sidebar-container">
+      <div className="container">
         <div className="d-flex align-item-center mt-3 ml-2">
           <div className="info">
             <h3 className="mb-0 hd">{props.title}</h3>

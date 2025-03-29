@@ -822,6 +822,8 @@ footer .copyright p{
   padding: 0px;
   overflow: hidden;
   border-radius: 15px;}
+.productZoom img {
+  height: auto !important;}
 .productZoom .badge{
   position: absolute; 
   top: 20px; 
