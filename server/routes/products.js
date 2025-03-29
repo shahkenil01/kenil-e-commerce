@@ -51,7 +51,7 @@ router.post(`/create`, async (req, res) => {
     let product = new Product({
       name:req.body.name,
       description:req.body.description,
-      images:imgurl,
+      images: imgurl,
       brand:req.body.brand,
       price:req.body.proce,
       category:req.body.category,

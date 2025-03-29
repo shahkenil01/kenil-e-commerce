@@ -9,7 +9,7 @@ const productSchema = mongoose.Schema({
     type: String,
     required: true
   },
-  Images: [{
+  images: [{
     type:String,
     required: true
     }
