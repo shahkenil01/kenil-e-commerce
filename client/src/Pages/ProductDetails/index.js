@@ -27,7 +27,7 @@ const ProductDetails = () =>{
                         </div>
 
                         <div className="col-md-8">
-                            <h2 className="hd text-capitalize">All Natural Italian-Style Chicken Meatballs</h2>
+                            <h2 className="hd text-capitalize">Men Alias-N Regular Fit Spread Collar Shirt</h2>
                             <ul className="list list-inline d-flex align-items-center">
                                 <li className="list-inline-item">
                                     <div className="d-flex align-items-center">
