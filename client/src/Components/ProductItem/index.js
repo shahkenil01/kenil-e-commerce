@@ -14,7 +14,7 @@ const ProductItem = (props) => {
             <div className={`productItem ${props.itemView}`}>
             <Link to="/product/1" className="fullLink"></Link>
                 <div className="imgWrapper"><Link to="/product/1">
-                    <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-62-346x310.jpg" className="w-100" alt='Product'/></Link>
+                    <img src="https://api.spicezgold.com/download/file_1734690981297_011618e4-4682-4123-be80-1fb7737d34ad1714702040213RARERABBITMenComfortOpaqueCasualShirt1.jpg" className="w-100" alt='Product'/></Link>
                     <span className="badge badge-primary">-50%</span>
                     <div className="actions">
                         <Button onClick={() => setIsOpenProductModal(true)}><TfiFullscreen /></Button>
@@ -22,7 +22,7 @@ const ProductItem = (props) => {
                     </div>
                 </div>
                 <div className="info"><Link to="/product/1">
-                    <h4>All Natural Italian-Style Meatballs</h4></Link>
+                    <h4>Men Alias-N Regular Fit Spread Collar Shirt</h4></Link>
                     <span className="text-success d-block">In Stock</span>
                     <Rating className="mt-1 mb-1" name="read-only" value={4.5} readOnly size="small" precision={0.5} />
                     <div className="d-flex">

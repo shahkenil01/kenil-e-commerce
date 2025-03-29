@@ -427,8 +427,8 @@ nav .navPart1 .catWrapper .sidebarNav ul li:hover .submenu button{
   border-radius: 7px;
   overflow: hidden;}
 .col-md-3 {
-  flex: 0 0 23%;
-  max-width: 23%;}
+  flex: 0 0 22%;
+  max-width: 22%;}
 .sticky{/*Banner Postion Fix*/
   position: sticky;
   top: 10px;
@@ -567,7 +567,8 @@ nav .navPart1 .catWrapper .sidebarNav ul li:hover .submenu button{
   color: #fff !important;}
 .productItem .imgWrapper{
   overflow: hidden;
-  pointer-events: none;}
+  pointer-events: none;
+  height: 230px;}
 
 .productItem .imgWrapper img{
   transition: all 0.3s ease-in-out;
