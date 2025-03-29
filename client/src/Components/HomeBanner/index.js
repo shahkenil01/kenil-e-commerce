@@ -17,6 +17,7 @@ const homeBanner = ()=>{
         dots: false,
         infinite: true,
         speed: 500,
+        spaceBetween: 10,
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
