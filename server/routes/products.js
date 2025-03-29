@@ -48,7 +48,18 @@ router.post(`/create`, async (req, res) => {
       });
     }
 
-    let product = new Product(req.body);
+    let product = new Product({
+      name:req.body.name,
+      description:req.body.description,
+      images:imgurl,
+      brand:req.body.brand,
+      price:req.body.proce,
+      category:req.body.category,
+      countInStock:req.body.countInStock,
+      rating:req.body.rating,
+      numReviews:req.body.numReviews,
+      isFeatured:req.body.isFeatured
+    });
     product = await product.save();
 
     if (!product) {
