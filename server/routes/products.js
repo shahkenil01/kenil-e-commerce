@@ -78,6 +78,20 @@ router.post(`/create`, async (req, res) => {
   }
 });
 
+router.get('/:id', async (req, res) => {
+  try {
+      const product = await Product.findById(req.params.id);
+
+      if (!product) {
+          return res.status(404).json({ message: 'The product with the given ID was not found.' });
+      }
+
+      return res.status(200).send(product);
+  } catch (error) {
+      return res.status(500).json({ message: 'Internal Server Error', error: error.message });
+  }
+});
+
 router.delete('/:id', async (req, res) => {
   try {
     const deleteProduct = await Product.findByIdAndDelete(req.params.id);
@@ -98,5 +112,33 @@ router.delete('/:id', async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
+
+router.put('/:id', async (req, res) => {
+  try {
+    const product = await Product.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    );
+
+    if (!product) {
+      return res.status(404).json({
+        message: 'The product cannot be updated!',
+        status: false
+      });
+    }
+
+    return res.status(200).json({
+      message: 'The product is updated!',
+      status: true
+    });
+  } catch (error) {
+      return res.status(500).json({
+        message: 'Internal Server Error',
+        error: error.message
+      });
+  }
+});
+
 
 module.exports =router;

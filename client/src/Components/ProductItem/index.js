@@ -22,7 +22,7 @@ const ProductItem = (props) => {
                     </div>
                 </div>
                 <div className="info"><Link to="/product/1">
-                    <h4>All Natural Italian-Style Chicken Meatballs</h4></Link>
+                    <h4>All Natural Italian-Style Meatballs</h4></Link>
                     <span className="text-success d-block">In Stock</span>
                     <Rating className="mt-1 mb-1" name="read-only" value={4.5} readOnly size="small" precision={0.5} />
                     <div className="d-flex">
