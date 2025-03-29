@@ -1,5 +1,5 @@
-const { Category } = require('../models/category');
-const { Product } = require('../models/product');
+const { Category } = require('../models/category.js');
+const { Product } = require('../models/products.js');
 const express = require('express');
 const router = express.Router();
 
@@ -9,6 +9,7 @@ router.get(`/`, async (req, res) => {
   if (!productList) {
     res.status(500).json({ success: false });
   }
-
   res.send(productList);
 });
+
+module.exports =router;
