@@ -1,4 +1,4 @@
-const { Category } = require('../models/category.js');
+const Category = require('../models/category.js');
 const { Product } = require('../models/products.js');
 const express = require('express');
 const router = express.Router();
@@ -78,5 +78,25 @@ router.post(`/create`, async (req, res) => {
   }
 });
 
+router.delete('/:id', async (req, res) => {
+  try {
+    const deleteProduct = await Product.findByIdAndDelete(req.params.id);
+
+    if (!deleteProduct) {
+      return res.status(404).json({
+        message: "Product not found!",
+        status: false
+      });
+    }
+
+    res.status(200).json({
+      message: "The product is deleted!",
+      status: true
+    });
+
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
 
 module.exports =router;
