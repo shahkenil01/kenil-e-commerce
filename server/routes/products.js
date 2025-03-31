@@ -1,4 +1,4 @@
-const Category = require('../models/category.js');
+const { Category } = require('../models/category.js');
 const { Product } = require('../models/products.js');
 const express = require('express');
 const router = express.Router();
@@ -115,9 +115,46 @@ router.delete('/:id', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
   try {
+    const limit = pLimit(2);
+
+    if (!Array.isArray(req.body.images) || req.body.images.length === 0) {
+      return res.status(400).json({ error: "No images provided", status: false });
+    }
+
+    const imagesToUpload = req.body.images.map((image) => {
+      return limit(async () => {
+        const result = await cloudinary.uploader.upload(image);
+        return result;
+      });
+    });
+
+    const uploadStatus = await Promise.all(imagesToUpload);
+
+    const imgurl = uploadStatus.map((item) => {
+      return item.secure_url;
+    });
+
+    if (!uploadStatus) {
+      return res.status(500).json({
+        error: "Images cannot be uploaded!",
+        status: false
+      });
+    }
+
     const product = await Product.findByIdAndUpdate(
       req.params.id,
-      req.body,
+      {
+        name: req.body.name,
+        description: req.body.description,
+        images: imgurl,
+        brand: req.body.brand,
+        price: req.body.price,
+        category: req.body.category,
+        countInStock: req.body.countInStock,
+        rating: req.body.rating,
+        numReviews: req.body.numReviews,
+        isFeatured: req.body.isFeatured
+      },
       { new: true }
     );
 
@@ -132,13 +169,15 @@ router.put('/:id', async (req, res) => {
       message: 'The product is updated!',
       status: true
     });
+
   } catch (error) {
-      return res.status(500).json({
-        message: 'Internal Server Error',
-        error: error.message
-      });
+    return res.status(500).json({
+      message: 'Internal Server Error',
+      error: error.message
+    });
   }
 });
+
 
 
 module.exports =router;
